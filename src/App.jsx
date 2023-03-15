@@ -8,10 +8,12 @@ function App() {
 
 
   return (
-    <div>
+    <main>
       <Rate/>
-      <Ratetoggle/>
-    </div>
+      <Ratetoggle
+      country="AUD"
+      />
+    </main>
   )
 }
 
