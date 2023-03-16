@@ -3,14 +3,14 @@ import App from '../App'
 import { useState } from 'react'
 import '../App.css'
 
-function Rate (){
+function Rate (props){
   return(
   <div>
     <h1>
 				Current Rate
 		</h1>
     <span id="value"> 
-    0 
+    {props.amount}
     </span>
   </div>
   )
