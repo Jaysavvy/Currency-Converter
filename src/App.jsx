@@ -17,7 +17,9 @@ function App() {
     .then(ApiData => setCurrencyData(ApiData))
     
     
-  }, [currency])
+  }, [])
+
+  console.log(currency)
 
   // setCurrencyData(PreCurrency => {
   //   if(condition){
@@ -33,7 +35,14 @@ function App() {
 
 // const baseElement = currency.map(currCurrency => <Ratetoggle country={currCurrency.base} />)
 
-console.log(Object.keys(currency.rates));
+// console.log(Object.keys(currency.rates));
+
+// for (let pair of Object.entries(
+//   currency.rates
+// )){
+//   console.log(pair)
+// }
+
 
   return (
     <main>
@@ -41,7 +50,7 @@ console.log(Object.keys(currency.rates));
       amount={currency.amount}
       />
       <Ratetoggle
-      country="AUD"
+      country={currency.base}
       />
     </main>
   )
